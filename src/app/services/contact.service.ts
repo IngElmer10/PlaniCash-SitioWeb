@@ -13,7 +13,7 @@ export interface ContactForm {
   providedIn: 'root'
 })
 export class ContactService {
-  private apiUrl = 'http://localhost:3000/api/contact';
+  private apiUrl = 'plani-cash-backend.vercel.app/api/contact';
 
   constructor(private http: HttpClient) { }
 
