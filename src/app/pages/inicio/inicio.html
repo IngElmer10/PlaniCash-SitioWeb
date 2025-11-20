@@ -1,0 +1,488 @@
+<header class="header">
+  <div class="container">
+    <nav class="navbar">
+      <div class="logo">
+        <h1>FirstMillion Systems</h1>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <a
+            (click)="scrollToSection('inicio')"
+            [class.active]="activeSection === 'inicio'"
+            >Inicio</a
+          >
+        </li>
+        <li>
+          <a
+            (click)="scrollToSection('servicios')"
+            [class.active]="activeSection === 'servicios'"
+            >Servicios</a
+          >
+        </li>
+        <li>
+          <a
+            (click)="scrollToSection('planicash')"
+            [class.active]="activeSection === 'planicash'"
+            >PlaniCash</a
+          >
+        </li>
+        <li>
+          <a
+            (click)="scrollToSection('caracteristicas')"
+            [class.active]="activeSection === 'caracteristicas'"
+            >Características</a
+          >
+        </li>
+        <li>
+          <a
+            (click)="scrollToSection('precios')"
+            [class.active]="activeSection === 'precios'"
+            >Precios</a
+          >
+        </li>
+        <li>
+          <a
+            (click)="scrollToSection('quienes-somos')"
+            [class.active]="activeSection === 'quienes-somos'"
+            >Quiénes Somos</a
+          >
+        </li>
+        <li>
+          <a
+            (click)="scrollToSection('contactanos')"
+            [class.active]="activeSection === 'contactanos'"
+            >Contáctanos</a
+          >
+        </li>
+      </ul>
+      <button class="theme-toggle" (click)="toggleTheme()" [attr.aria-label]="isDarkMode ? 'Activar modo claro' : 'Activar modo oscuro'">
+        <span class="theme-icon">{{ isDarkMode ? '☀️' : '🌙' }}</span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="inicio">
+  <div class="container">
+    <div class="hero-content">
+      <h1>Gestiona tus finanzas personales de forma inteligente</h1>
+      <p>
+        Con FirstMillion, toma el control de tu dinero, ahorra más y cumple tus metas
+        financieras.
+      </p>
+      <div class="hero-buttons">
+        <button class="btn-primary">Prueba Gratuita</button>
+        <button class="btn-secondary">Saber Más</button>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img
+        src="assets/images/dashboard-preview.svg"
+        alt="PlaniCash Dashboard Preview"
+      />
+    </div>
+  </div>
+</section>
+
+<!-- Servicios de la empresa (Slider) -->
+<section class="services" id="servicios">
+  <div class="container">
+    <div class="section-header">
+      <h2>Servicios que Ofrecemos</h2>
+      <p>Soluciones integrales para tu crecimiento financiero</p>
+    </div>
+    <div class="horizontal-slider">
+      <button class="slider-btn prev" aria-label="Anterior" (click)="scrollSlider('servicios-track','left')">&#10094;</button>
+      <div class="slider-track" id="servicios-track">
+        <div class="service-card" scrollItem>
+          <div class="feature-icon">
+            <i class="fas fa-user-tie"></i>
+          </div>
+          <h3>Consultoría Financiera</h3>
+          <p>Asesoramiento personalizado para mejorar tu salud financiera y optimizar decisiones clave.</p>
+        </div>
+        <div class="service-card" scrollItem>
+          <div class="feature-icon">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <h3>Educación Financiera</h3>
+          <p>Cursos y micro‑lecciones dentro de la plataforma para fomentar hábitos sanos de ahorro.</p>
+        </div>
+        <div class="service-card" scrollItem>
+          <div class="feature-icon">
+            <i class="fas fa-link"></i>
+          </div>
+          <h3>Integración Bancaria</h3>
+          <p>Conecta y sincroniza múltiples cuentas para tener una visión 360° de tus finanzas.</p>
+        </div>
+        <div class="service-card" scrollItem>
+          <div class="feature-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3>Seguridad y Cumplimiento</h3>
+          <p>Protección de datos con estándares modernos y cumplimiento normativo regional.</p>
+        </div>
+        <div class="service-card" scrollItem>
+          <div class="feature-icon">
+            <i class="fas fa-brain"></i>
+          </div>
+          <h3>Analítica Avanzada</h3>
+          <p>Modelos de IA para detectar patrones de gasto y sugerir oportunidades de ahorro.</p>
+        </div>
+        <div class="service-card" scrollItem>
+          <div class="feature-icon">
+            <i class="fas fa-headset"></i>
+          </div>
+          <h3>Soporte Prioritario</h3>
+          <p>Equipo dedicado para resolver tus incidencias con rapidez y cercanía.</p>
+        </div>
+      </div>
+      <button class="slider-btn next" aria-label="Siguiente" (click)="scrollSlider('servicios-track','right')">&#10095;</button>
+    </div>
+  </div>
+</section>
+
+<!-- Promoción de PlaniCash -->
+<section class="planicash-promo" id="planicash">
+  <div class="container promo-layout">
+    <div class="promo-image">
+      <img src="assets/images/PlaniCash.jpg" alt="Vista previa PlaniCash" />
+    </div>
+    <div class="promo-text">
+      <h2>PlaniCash: Planifica, Ahorra y Crece</h2>
+      <p>
+        Descubre nuestra aplicación complementaria <strong>PlaniCash</strong>, pensada para ayudarte
+        a crear planes financieros dinámicos, fijar objetivos y recibir alertas
+        inteligentes cuando te desvías de tu estrategia de ahorro.
+      </p>
+      <ul class="promo-features">
+        <li>Creación rápida de planes mensuales y anuales</li>
+        <li>Alertas proactivas de sobre‑gasto</li>
+        <li>Recomendaciones impulsadas por IA</li>
+        <li>Modo colaborativo para finanzas familiares</li>
+      </ul>
+      <div class="promo-ctas">
+        <a class="btn-primary" href="https://github.com/MarioQuimetMed/Sw2-Grupal-Movil/releases/download/apk/PlaniCash.apk" target="_blank" rel="noopener">Descargar APK</a>
+        <button class="btn-secondary" (click)="scrollToSection('precios')">Ver Planes</button>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- Características de la aplicación (Slider) -->
+<section class="features" id="caracteristicas">
+  <div class="container">
+    <div class="section-header">
+      <h2>Características Principales</h2>
+      <p>Descubre cómo PlaniCash te ayuda a organizar tus finanzas</p>
+    </div>
+    <div class="horizontal-slider">
+      <button class="slider-btn prev" aria-label="Anterior" (click)="scrollSlider('features-track','left')">&#10094;</button>
+      <div class="slider-track" id="features-track">
+        <div class="feature-card" scrollItem>
+          <div class="feature-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3>Seguimiento de Gastos</h3>
+          <p>Visualiza y categoriza automáticamente tus gastos para saber exactamente dónde va tu dinero.</p>
+        </div>
+        <div class="feature-card" scrollItem>
+          <div class="feature-icon">
+            <i class="fas fa-bullseye"></i>
+          </div>
+          <h3>Metas de Ahorro</h3>
+          <p>Establece objetivos de ahorro y recibe notificaciones de progreso para mantenerte en el camino correcto.</p>
+        </div>
+        <div class="feature-card" scrollItem>
+          <div class="feature-icon">
+            <i class="fas fa-wallet"></i>
+          </div>
+          <h3>Presupuestos Inteligentes</h3>
+          <p>Crea presupuestos personalizados basados en tus hábitos de gasto y aprende a mejorarlos.</p>
+        </div>
+        <div class="feature-card" scrollItem>
+          <div class="feature-icon">
+            <i class="fas fa-chart-pie"></i>
+          </div>
+          <h3>Análisis Financiero</h3>
+          <p>Obtén insights sobre tus hábitos financieros con gráficos claros y recomendaciones personalizadas.</p>
+        </div>
+      </div>
+      <button class="slider-btn next" aria-label="Siguiente" (click)="scrollSlider('features-track','right')">&#10095;</button>
+    </div>
+  </div>
+</section>
+
+<section class="pricing" id="precios">
+  <div class="container">
+    <div class="section-header">
+      <h2>Planes y Precios</h2>
+      <p>Encuentra el plan perfecto para tus necesidades</p>
+    </div>
+    <div class="pricing-plans">
+      <div class="pricing-card">
+        <div class="pricing-header">
+          <h3>Básico</h3>
+          <div class="price">
+            <span class="currency">$</span>
+            <span class="amount">0</span>
+            <span class="period">/mes</span>
+          </div>
+        </div>
+        <div class="pricing-features">
+          <ul>
+            <li>Seguimiento básico de gastos</li>
+            <li>Hasta 2 cuentas bancarias</li>
+            <li>Informes mensuales</li>
+            <li>App móvil básica</li>
+          </ul>
+        </div>
+        <button class="btn-pricing">Comenzar Gratis</button>
+      </div>
+
+      <div class="pricing-card">
+        <div class="pricing-header">
+          <h3>Premium</h3>
+          <div class="price">
+            <span class="currency">$</span>
+            <span class="amount">9.99</span>
+            <span class="period">/mes</span>
+          </div>
+        </div>
+        <div class="pricing-features">
+          <ul>
+            <li>Seguimiento ilimitado de gastos</li>
+            <li>Hasta 10 cuentas bancarias</li>
+            <li>Informes personalizados</li>
+            <li>Sincronización con todas tus cuentas</li>
+            <li>Herramientas de presupuesto avanzadas</li>
+          </ul>
+        </div>
+        <button class="btn-pricing">Suscribirse</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="quienes-somos">
+  <div class="container">
+    <div class="section-header">
+      <h2>Quiénes Somos</h2>
+      <p>Conoce al equipo detrás de FirstMillion Systems</p>
+    </div>
+    <div class="about-content">
+      <div class="about-text">
+        <h3>Nuestra Misión</h3>
+        <p>
+          Desarrollar soluciones tecnológicas innovadoras que permitan 
+          a las personas mejorar su bienestar financiero, optimizar la administración 
+          de sus recursos y avanzar de forma estratégica hacia el logro de su primer millón. 
+          Nuestro compromiso es ofrecer herramientas inteligentes, accesibles y 
+          seguras que faciliten el control del dinero, la toma de decisiones informadas y 
+          la construcción de hábitos financieros sostenibles.
+        </p>
+        <h3>Nuestra Visión</h3>
+        <p>
+          Convertirnos en la empresa líder en tecnología financiera a nivel regional, 
+          reconocida por transformar la vida económica de las personas mediante 
+          sistemas inteligentes que impulsen independencia, estabilidad y 
+          crecimiento financiero sostenible.
+        </p>
+      </div>
+      <div class="team-images">
+        <div class="team-member">
+          <img src="/assets/images/perfil.jpg" alt="CEO" />
+          <h4>Elmer Fuentes Lozano</h4>
+          <p>CEO & Fundador</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials">
+  <div class="container">
+    <div class="section-header">
+      <h2>Lo que dicen nuestros usuarios</h2>
+      <p>Miles de personas han mejorado sus finanzas con FirstMillion Systems</p>
+    </div>
+    <div class="testimonial-slider">
+      <div class="testimonial-card">
+        <div class="quote">
+          "PlaniCash cambió mi relación con el dinero. Por primera vez, tengo
+          ahorros reales y un plan claro para mi futuro financiero."
+        </div>
+        <div class="user">
+          <img src="assets/images/user1.jpg" alt="Usuario" />
+          <div>
+            <h4>Roberto Sánchez</h4>
+            <p>Usuario desde 2025</p>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="quote">
+          "La interfaz es tan intuitiva que finalmente pude involucrar a toda mi
+          familia en nuestras finanzas. El presupuesto familiar nunca fue tan
+          fácil."
+        </div>
+        <div class="user">
+          <img src="assets/images/user2.jpg" alt="Usuario" />
+          <div>
+            <h4>Laura Pérez</h4>
+            <p>Usuario Premium</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contactanos">
+  <div class="container">
+    <div class="section-header">
+      <h2>Contáctanos</h2>
+      <p>Estamos aquí para responder tus preguntas</p>
+    </div>
+    <div class="contact-container">
+      <div class="contact-info">
+        <div class="contact-item">
+          <i class="icon-email"></i>
+          <div>
+            <h3>Email</h3>
+            <p>soporte&#64;firstmillion.bo</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <i class="icon-phone"></i>
+          <div>
+            <h3>Teléfono</h3>
+            <p>+591 7 13 83 655</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <i class="icon-location"></i>
+          <div>
+            <h3>Oficina</h3>
+            <p>Av. Roca y Coronado, Santa Cruz, Bolivia</p>
+          </div>
+        </div>
+        <div class="social-links">
+          <a href="#"><i class="icon-facebook"></i></a>
+          <a href="#"><i class="icon-twitter"></i></a>
+          <a href="#"><i class="icon-instagram"></i></a>
+          <a href="#"><i class="icon-linkedin"></i></a>
+        </div>
+      </div>
+      <div class="contact-form">
+        <form (submit)="submitContactForm($event)">
+          <div class="form-group">
+            <label for="name">Nombre</label>
+            <input 
+              type="text" 
+              id="name" 
+              name="name"
+              placeholder="Tu nombre" 
+              [(ngModel)]="contactForm.name"
+              required 
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="tu@email.com"
+              [(ngModel)]="contactForm.email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="subject">Asunto</label>
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              placeholder="¿En qué podemos ayudarte?"
+              [(ngModel)]="contactForm.subject"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="message">Mensaje</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              placeholder="Tu mensaje"
+              [(ngModel)]="contactForm.message"
+              required
+            ></textarea>
+          </div>
+          
+          <!-- Mensaje de respuesta -->
+          <div *ngIf="submitMessage" 
+               [class]="submitSuccess ? 'alert alert-success' : 'alert alert-error'"
+               style="margin-top: 1rem; padding: 1rem; border-radius: 8px; text-align: center;">
+            {{ submitMessage }}
+          </div>
+          
+          <button 
+            type="submit" 
+            class="btn-primary" 
+            [disabled]="isSubmitting"
+            [style.opacity]="isSubmitting ? '0.6' : '1'"
+            [style.cursor]="isSubmitting ? 'not-allowed' : 'pointer'">
+            {{ isSubmitting ? 'Enviando...' : 'Enviar Mensaje' }}
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <h2>FirstMillion Systems</h2>
+        <p>Tu aliado para una mejor salud financiera</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-column">
+          <h3>Producto</h3>
+          <ul>
+            <li><a href="#">Características</a></li>
+            <li><a href="#">Precios</a></li>
+            <li><a href="#">Testimonios</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Empresa</h3>
+          <ul>
+            <li><a href="#">Quiénes Somos</a></li>
+            <li><a href="#">Equipo</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Legal</h3>
+          <ul>
+            <li><a routerLink="/terminos">Términos de Servicio</a></li>
+
+            <li><a routerLink="/privacidad">Política de Privacidad</a></li>
+            <li><a href="#">Cookies</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 FirstMillion Systems. Todos los derechos reservados.</p>
+    </div>
+  </div>
+</footer>
+<app-chatbot />
