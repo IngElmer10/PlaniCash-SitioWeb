@@ -30,7 +30,7 @@ Responde siempre en español, de manera breve y profesional.
 
     try {
       // URL del backend - ajusta según tu configuración
-      const backendUrl = 'http://localhost:3000/api';
+      const backendUrl = 'https://plani-cash-backend.vercel.app/api';
       
       const response = await fetch(`${backendUrl}/ai/chatbot`, {
         method: 'POST',
