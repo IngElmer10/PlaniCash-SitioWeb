@@ -13,7 +13,7 @@ export interface ContactForm {
   providedIn: 'root'
 })
 export class ContactService {
-  private apiUrl = 'https://planicash-backend.vercel.app/api/contact';
+  private apiUrl = 'https://plani-cash-backend.vercel.app/api/contact';
 
   constructor(private http: HttpClient) { }
 
